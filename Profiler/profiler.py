@@ -1,6 +1,8 @@
 import time
 import logging
 import json
+import os
+import threading
 
 
 dict_of_trc_evt = {'traceEvents': []}
@@ -20,11 +22,11 @@ def func_form_trc_evt(name, ts, te, dur):
 
 def func_create_logger():
     log_file = 'profiler.log'
-    log_format = "%(levelname)s, %(asctime)s,  %(message)s"
+    log_fmt = "%(levelname)s, %(asctime)s,  %(message)s"
 
     logging.basicConfig(filename=log_file,
                         level=logging.DEBUG,
-                        format=log_format,
+                        format=log_fmt,
                         filemode="w")
 
     return logging.getLogger()
@@ -43,7 +45,9 @@ def deco_profiler(func):
         # ==========================
         te = time.time()*1e6  # us
         dur = te - ts
-        logger.info(name + " takes: "+str(round(dur/1e3, 0))+" ms")
+        pid = os.getpid()
+        tid = threading.current_thread()
+        logger.info(name + " takes: "+str(round(dur/1e3, 0))+" ms, pid = "+str(pid)+", tid = "+str(tid))
         func_form_trc_evt(name, ts, te, dur)
 
         return result

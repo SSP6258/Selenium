@@ -1,0 +1,6 @@
+INFO, 2020-03-15 20:38:05,876,  func_c start
+INFO, 2020-03-15 20:38:06,876,  func_b start
+INFO, 2020-03-15 20:38:07,877,  func_a start
+INFO, 2020-03-15 20:38:08,877,  func_a takes: 1000.0 ms, pid =6540, tid = <_MainThread(MainThread, started 11752)>
+INFO, 2020-03-15 20:38:08,877,  func_b takes: 2001.0 ms, pid =6540, tid = <_MainThread(MainThread, started 11752)>
+INFO, 2020-03-15 20:38:08,878,  func_c takes: 3002.0 ms, pid =6540, tid = <_MainThread(MainThread, started 11752)>

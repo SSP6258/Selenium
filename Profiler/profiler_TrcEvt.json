@@ -1,0 +1,31 @@
+{
+  "traceEvents": [
+    {
+      "cat": "function",
+      "name": "func_a",
+      "ts": 1584275887877321.5,
+      "dur": 1000334.5,
+      "tid": 1,
+      "pid": 1,
+      "ph": "X"
+    },
+    {
+      "cat": "function",
+      "name": "func_b",
+      "ts": 1584275886876812.2,
+      "dur": 2000843.75,
+      "tid": 1,
+      "pid": 1,
+      "ph": "X"
+    },
+    {
+      "cat": "function",
+      "name": "func_c",
+      "ts": 1584275885876270.5,
+      "dur": 3002446.75,
+      "tid": 1,
+      "pid": 1,
+      "ph": "X"
+    }
+  ]
+}
